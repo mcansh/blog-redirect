@@ -9,6 +9,9 @@
     "email": "logan@mcan.sh",
     "url": "https://mcan.sh"
   },
+  "now": {
+    "alias": "blog.loganmcansh.com"
+  },
   "license": "MIT",
   "scripts": {
     "dev": "nodemon server.js",
