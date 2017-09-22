@@ -1,5 +1,7 @@
 # Blog Redirect
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mcansh/blog-redirect.svg)](https://greenkeeper.io/)
+
 Simple Express app to redirect old blog post URLs to my new blog.
 
 ## Running Locally
