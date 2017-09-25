@@ -19,7 +19,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "express": "4.15.3"
+    "express": "5.0.0-alpha.6"
   },
   "devDependencies": {
     "ava": "0.22.0",
