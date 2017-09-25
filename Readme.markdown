@@ -1,5 +1,7 @@
 # Blog Redirect
 
+[![Build Status](https://travis-ci.org/mcansh/blog-redirect.svg?branch=master)](https://travis-ci.org/mcansh/blog-redirect)
+
 Simple Express app to redirect old blog post URLs to my new blog.
 
 ## Running Locally
