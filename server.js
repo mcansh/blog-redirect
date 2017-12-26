@@ -1,24 +1,17 @@
-const express = require('express');
-const url = require('url');
+const { createServer } = require('http');
 
-const server = express();
+const server = createServer((req, res) => {
+  const { url } = req;
+  const location = `https://mcansh.blog${url}`;
 
-server.get('*', (req, res) => {
-  res.redirect(
-    301,
-    url.format({
-      protocol: 'https',
-      host: 'mcansh.blog',
-      pathname: req.path,
-      query: req.query,
-    }),
-  );
-});
+  res.writeHead(301, {
+    location,
+  });
 
-server.listen(3000, (err) => {
+  res.end();
+}).listen(3000, (err) => {
   if (err) throw err;
-  // eslint-disable-next-line no-console
-  console.log('> Ready on http://localhost:3000');
+  console.log('> Ready on http://localhost:3000'); // eslint-disable-line no-console
 });
 
 module.exports = server;
