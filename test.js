@@ -2,7 +2,7 @@ import test from 'ava';
 import request from 'supertest';
 import app from './server';
 
-test('root redirect', async (t) => {
+test('root redirect', async t => {
   t.plan(2);
 
   const res = await request(app).get('/');
@@ -11,7 +11,7 @@ test('root redirect', async (t) => {
   t.is(res.header.location, 'https://mcansh.blog/');
 });
 
-test('plain post', async (t) => {
+test('plain post', async t => {
   t.plan(2);
 
   const res = await request(app).get('/sinatra-project');
@@ -20,11 +20,14 @@ test('plain post', async (t) => {
   t.is(res.header.location, 'https://mcansh.blog/sinatra-project');
 });
 
-test('post with query string', async (t) => {
+test('post with query string', async t => {
   t.plan(2);
 
   const res = await request(app).get('/sinatra-project?autoplay=true');
 
   t.is(res.status, 301);
-  t.is(res.header.location, 'https://mcansh.blog/sinatra-project?autoplay=true');
+  t.is(
+    res.header.location,
+    'https://mcansh.blog/sinatra-project?autoplay=true'
+  );
 });

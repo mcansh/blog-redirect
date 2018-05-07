@@ -9,7 +9,7 @@ const server = createServer((req, res) => {
   });
 
   res.end();
-}).listen(3000, (err) => {
+}).listen(3000, err => {
   if (err) throw err;
   console.log('> Ready on http://localhost:3000'); // eslint-disable-line no-console
 });
