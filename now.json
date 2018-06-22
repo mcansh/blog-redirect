@@ -1,0 +1,22 @@
+{
+  "alias": "blog.loganmcansh.com",
+  "type": "static",
+  "features": {
+    "static": "v2"
+  },
+  "static": {
+    "directoryListing": false,
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://mcansh.blog",
+        "type": 301
+      },
+      {
+        "source": "/:page",
+        "destination": "https://mcansh.blog/:page",
+        "type": 301
+      }
+    ]
+  }
+}
