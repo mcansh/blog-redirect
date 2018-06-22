@@ -1,4 +1,5 @@
 {
+  "name": "mcansh-blog-redirect",
   "alias": "blog.loganmcansh.com",
   "type": "static",
   "features": {
