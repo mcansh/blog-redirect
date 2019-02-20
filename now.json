@@ -1,23 +1,21 @@
 {
   "name": "mcansh-blog-redirect",
   "alias": "blog.loganmcansh.com",
-  "type": "static",
-  "features": {
-    "static": "v2"
-  },
-  "static": {
-    "directoryListing": false,
-    "redirects": [
-      {
-        "source": "/",
-        "destination": "https://mcansh.blog",
-        "type": 301
-      },
-      {
-        "source": "/:page",
-        "destination": "https://mcansh.blog/:page",
-        "type": 301
+  "version": 2,
+  "routes": [
+    {
+      "src": "/",
+      "status": 301,
+      "headers": {
+        "Location": "https://mcansh.blog"
       }
-    ]
-  }
+    },
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": {
+        "Location": "https://mcansh.blog/$1"
+      }
+    }
+  ]
 }
